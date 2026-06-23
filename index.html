@@ -243,12 +243,30 @@
       text-decoration: none;
       transition: all 0.3s ease;
       font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      max-width: 120px;
     }
 
     .weather-btn:hover {
       background: linear-gradient(135deg, #764ba2, #667eea);
       transform: translateY(-3px);
       box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+      max-width: 320px;
+    }
+
+    .weather-btn-extra {
+      max-width: 0;
+      opacity: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      margin-left: 0;
+      transition: max-width 0.4s ease, opacity 0.3s ease, margin-left 0.4s ease;
+    }
+
+    .weather-btn:hover .weather-btn-extra {
+      max-width: 260px;
+      opacity: 1;
+      margin-left: 4px;
     }
 
     .nav-divider {
@@ -811,9 +829,10 @@
         </a>
         <div class="nav-divider"></div>
 
-        <a href="#" class="weather-btn" target="_blank" rel="noopener">
-          <i class="fas fa-cloud-sun"></i>
-          <span>Weather</span>
+        <a href="https://feeder.ashishgtm.com.np" class="weather-btn" target="_blank" rel="noopener">
+          <i class="fas fa-plane"></i>
+          <span>Flights</span>
+          <span class="weather-btn-extra">Click here to see flights from my tracker</span>
         </a>
       </div>
     </div>
